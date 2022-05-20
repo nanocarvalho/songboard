@@ -33,9 +33,18 @@ function play(event) {
     let actualKeySelected = this.dataset.key
     const actualAudio = document.body.querySelector(`audio[data-key="${actualKeySelected}"]`)
     if(!actualAudio) return //Stop the function if no audio
-    actualAudio.currentTime = 0 //returns to the start, to repeat the sound
-    actualAudio.play()
-    this.classList.add('playing')
+ 
+    //chaos mode
+    if(chaosMode === true) {
+        let clone = actualAudio.cloneNode(true) 
+        actualAudio.play()
+        clone.play()
+    } else {
+        actualAudio.currentTime = 0 //returns to the start, to repeat the sound
+        actualAudio.play()
+        this.classList.add('playing')
+    }
+
     
 }
 
