@@ -41,3 +41,19 @@ body {
 .playing {
     background-color: rgb(40, 114, 133);
 }
+
+.chaos button {
+    border: 0;
+    border-radius: 1rem;
+    border: 2px solid rgb(53, 189, 137);;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 900;
+    transition: all 0.3s;
+}
+
+.chaos .active {
+    background-color: rgb(45, 142, 167);
+    color: #fff;
+}
